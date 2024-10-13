@@ -11,6 +11,39 @@
       0 0 40px #00b3ff,
       0 0 80px #00b3ff;     /* outer blue glow */
   }
-
+/* Fade in and slide from the right */
+@keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade in and slide from the left */
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply animation for sliding in from the right */
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+  }
+  
+  /* Apply animation for sliding in from the left */
+  .animate-slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
 
   
