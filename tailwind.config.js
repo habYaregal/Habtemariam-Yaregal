@@ -19,7 +19,10 @@ export default {
         },
         black:{
           500:'#000000'
-        }
+        },
+        neonp:{500: '#9b5de5'},
+        neonb:{500: '#00bbf9'},
+        neong:{500:'#00f5d4'},
       },
       fontFamily: {
         crafty: ['"Crafty Girls"', 'cursive'],
