@@ -77,9 +77,9 @@ const About = () => {
                                 variants={staggerContainer}
                             >
                                 {[
-                                    { title: "Frontend", skills: "React, Vue, Flutter", icon: <FaCode className="text-neonp-500 text-3xl" /> },
-                                    { title: "Backend", skills: "Node.js, Express, Django", icon: <FaServer className="text-neonp-500 text-3xl" /> },
-                                    { title: "Database", skills: "MongoDB, SQL", icon: <FaDatabase className="text-neonp-500 text-3xl" /> },
+                                    { title: "Frontend", skills: "React, Flutter", icon: <FaCode className="text-neonp-500 text-3xl" /> },
+                                    { title: "Backend", skills: "Node.js, Express", icon: <FaServer className="text-neonp-500 text-3xl" /> },
+                                    { title: "Database", skills: "MongoDB, MySQL, Postgresql", icon: <FaDatabase className="text-neonp-500 text-3xl" /> },
                                     { title: "Tools", skills: "Git, GitHub, Figma", icon: <FaToolbox className="text-neonp-500 text-3xl" /> }
                                 ].map((item, index) => (
                                     <motion.div

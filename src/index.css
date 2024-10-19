@@ -2,99 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Neon text effect */
 .neon-text {
-    color: #fff;
-    text-shadow:
-      0 0 5px #fff,         /* inner white glow */
-      0 0 10px #00b3ff,     /* primary neon blue glow */
-      0 0 20px #00b3ff,
-      0 0 40px #00b3ff,
-      0 0 80px #00b3ff;     /* outer blue glow */
-  }
-/* Fade in and slide from the right */
-@keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Fade in and slide from the left */
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Apply animation for sliding in from the right */
-  .animate-slide-in-right {
-    animation: slideInRight 1s ease-out forwards;
-  }
-  
-  /* Apply animation for sliding in from the left */
-  .animate-slide-in-left {
-    animation: slideInLeft 1s ease-out forwards;
-  }
+  color: #fff;
+  text-shadow: 
+    0 0 5px #fff,         /* inner white glow */
+    0 0 10px #00b3ff,     /* primary neon blue glow */
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff;     /* outer blue glow */
+}
 
-  /* Neon colors */
+/* Neon colors */
 .text-neon-purple {
   color: #c084fc;
 }
 
+/* Universal glow effect */
 .neon-glow {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #f7d02c, 0 0 30px #f7d02c;
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px #f7d02c,
+    0 0 30px #f7d02c;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .neon-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px #f7d02c, 0 0 40px #f7d02c;
-}
-
-/* Fade-in animation */
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 1s ease-out;
-}
-
-/* Background overlay for HUD effect */
-.bg-overlay-pattern {
-  background: url('/path/to/hud-overlay.png') repeat;
-  opacity: 0.15;
-  mix-blend-mode: overlay;
-}
-
-/* Glow effect */
-.glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #f7d02c, 0 0 30px #f7d02c;
-}
-
-/* Neon glow animation */
-.neon-glow {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #78c7ff, 0 0 30px #78c7ff;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.neon-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px #78c7ff, 0 0 40px #78c7ff;
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px #f7d02c,
+    0 0 40px #f7d02c;
 }
 
 .hover-neon-pulse {
@@ -102,18 +39,74 @@
 }
 
 @keyframes pulse-neon {
-  0% {
-      box-shadow: 0 0 20px #f7d02c;
+  0%, 100% {
+    box-shadow: 0 0 20px #f7d02c;
   }
   50% {
-      box-shadow: 0 0 40px #f7d02c;
-  }
-  100% {
-      box-shadow: 0 0 20px #f7d02c;
+    box-shadow: 0 0 40px #f7d02c;
   }
 }
 
-/* Animated neon lines - game HUD effect */
+/* Keyframes for sliding animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--slide-direction));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  --slide-direction: -100%;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  --slide-direction: 100%;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Parallax effect */
+@keyframes parallax {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-parallax {
+  animation: parallax 10s ease-in-out infinite;
+}
+
+/* HUD overlay background pattern */
+.bg-overlay-pattern {
+  background: url('/path/to/hud-overlay.png') repeat;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+/* Neon lines (HUD effect) */
 .neon-lines-top, .neon-lines-bottom {
   position: absolute;
   width: 100%;
@@ -132,25 +125,25 @@
 
 @keyframes neon-line-animate {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
-/* Glowing border for profile image */
+/* Glowing border */
 .neon-border {
   box-shadow: 0 0 30px #78c7ff, 0 0 60px #78c7ff;
 }
 
-/* Spinning glow effect for the border ring */
+/* Glow spin animation */
 @keyframes glow-spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -158,13 +151,13 @@
   animation: glow-spin 4s linear infinite;
 }
 
-/* Slow pulse animation */
+/* Pulse slow animation */
 @keyframes pulse-slow {
   0%, 100% {
-      transform: scale(1.05);
+    transform: scale(1.05);
   }
   50% {
-      transform: scale(1.07);
+    transform: scale(1.07);
   }
 }
 
@@ -172,30 +165,11 @@
   animation: pulse-slow 3s infinite;
 }
 
-/* Parallax effect for depth */
-@keyframes parallax {
-  0% {
-      transform: translateY(0px);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
-  100% {
-      transform: translateY(0px);
-  }
-}
-
-.animate-parallax {
-  animation: parallax 10s ease-in-out infinite;
-}
-
-/* Adjust the styles to ensure the background remains fixed and scales correctly */
+/* Background styling */
 .min-h-screen {
   background-image: url('../assets/background.jpg');
-  background-size: cover;  /* You can also use 'contain' depending on your needs */
-  background-attachment: fixed; /* Keeps the background fixed while the content scrolls */
-  background-position: center center; /* Keeps the image centered */
-  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-
-  

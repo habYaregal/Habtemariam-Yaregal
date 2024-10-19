@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Import motion for animations
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../index.css';
 import background from '../assets/background 2.jpg';
 import adulis from '../assets/adulis.png';
+import explore from '../assets/explore.jpg';
+import gbi from '../assets/Gbi Gubae.jpg';
 import Navbar from '../components/NavBar';
 
 // Define animation variants for the Projects page
@@ -34,24 +35,28 @@ const Projects = () => {
         {
             id: 1,
             title: 'Project 1: Adulis',
-            description: 'Adulis steps into the world of logistics as a web-based platform fostering a more efficient freight ecosystem between a shipper and a carrier.',
+            description: 'An efficient freight ecosystem website between a shipper and a carrier worked with React, Node.js and Postgres.',
             image: adulis,
-            link: 'https://github.com/yourusername/project1',
+            live: 'https://adulis-sigma.vercel.app/', 
+            link: 'https://github.com/habYaregal/Adulis',
         },
         {
             id: 2,
-            title: 'Project 2: Task Manager App',
-            description: 'A Flutter-based task management app that helps users organize tasks with due dates, categories, and priorities. The app uses Provider for state management.',
-            image: 'project2.png',
+            title: 'Project 2: Gbi Gubae',
+            description: 'A Flutter-based app that helps college students to get updates and engage with their Church association.',
+            image: gbi,
+            live: 'https://github.com/habYaregal/Adulis', 
             link: 'https://github.com/yourusername/project2',
         },
         {
             id: 3,
-            title: 'Project 3: Social Media Dashboard',
-            description: 'A responsive social media dashboard built with Vue.js and Firebase, featuring user authentication, real-time data updates, and social feed analytics.',
-            image: 'project3.png',
-            link: 'https://github.com/yourusername/project3',
+            title: 'Project 3: Explore Ethiopia',
+            description: 'A responsive portfolio webpage for Ethiopian tourism which is made by React',
+            image: explore,
+            live: 'https://explore-et.vercel.app/', 
+            link: 'https://github.com/habYaregal/Explore-Ethiopia',
         },
+        
     ];
 
     return (
@@ -106,6 +111,14 @@ const Projects = () => {
                                         className="text-neonp-500 hover:text-hud-white transition-colors font-play"
                                     >
                                         View on GitHub
+                                    </a>
+                                    <a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-neonp-500 ml-16 hover:text-hud-white transition-colors font-play"
+                                    >
+                                        Live Preview
                                     </a>
                                 </div>
                             </motion.div>

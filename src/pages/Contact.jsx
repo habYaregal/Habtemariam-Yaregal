@@ -100,26 +100,26 @@ const Contact = () => {
                             <ul className="text-gray-300 space-y-4 text-center lg:text-left">
                                 <li>
                                     <span className="font-semibold">Email:</span>{' '}
-                                    <a href="mailto:your.email@example.com" className="text-neonp-500 hover:text-neonp-300 transition">
-                                        your.email@example.com
+                                    <a href="mailto:habtemariamyaregal@gmail.com" className="text-neonp-500 hover:text-neonp-300 transition">
+                                    habtemariamyaregal@gmail.com
                                     </a>
                                 </li>
                                 <li>
                                     <span className="font-semibold">Phone:</span>{' '}
-                                    <a href="tel:+1234567890" className="text-neonp-500 hover:text-neonp-300 transition">
-                                        +123 456 7890
+                                    <a href="tel:+251921334113" className="text-neonp-500 hover:text-neonp-300 transition">
+                                        +251-921-33-4113
                                     </a>
                                 </li>
                                 <li>
                                     <span className="font-semibold">LinkedIn:</span>{' '}
-                                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-neonp-500 hover:text-neonp-300 transition">
-                                        linkedin.com/in/yourprofile
+                                    <a href="https://www.linkedin.com/in/habtemariam-yaregal-5403682a5/" target="_blank" rel="noopener noreferrer" className="text-neonp-500 hover:text-neonp-300 transition">
+                                        linkedin.com/in/habtemariam-yaregal
                                     </a>
                                 </li>
                                 <li>
                                     <span className="font-semibold">GitHub:</span>{' '}
-                                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-neonp-500 hover:text-neonp-300 transition">
-                                        github.com/yourusername
+                                    <a href="https://github.com/habYaregal" target="_blank" rel="noopener noreferrer" className="text-neonp-500 hover:text-neonp-300 transition">
+                                        github.com/habYaregal
                                     </a>
                                 </li>
                             </ul>

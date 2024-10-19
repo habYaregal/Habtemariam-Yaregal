@@ -59,10 +59,10 @@ const Home = () => {
                             variants={fadeInWithDelay}
                             className="pt-8 space-y-3 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-6 lg:justify-start justify-center"
                         >
-                            <a href="#projects" className="px-6 py-2 sm:px-8 sm:py-3 w-full bg-neong-500 text-black font-orbit text-center rounded-md shadow-lg transition transform hover:scale-110">
+                            <a href="/Habtemariam Yaregal CV.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-2 sm:px-8 sm:py-3 w-full bg-neong-500 text-black font-orbit text-center rounded-md shadow-lg transition transform hover:scale-110">
                                 Download CV
                             </a>
-                            <a href="#contact" className="px-6 py-2 sm:px-8 sm:py-3 w-full bg-neonp-500 text-black text-center font-orbit rounded-md shadow-lg transition transform hover:scale-110">
+                            <a href="contact" className="px-6 py-2 sm:px-8 sm:py-3 w-full bg-neonp-500 text-black text-center font-orbit rounded-md shadow-lg transition transform hover:scale-110">
                                 Get in Touch
                             </a>
                         </motion.div>
