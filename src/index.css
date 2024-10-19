@@ -44,6 +44,158 @@
   .animate-slide-in-left {
     animation: slideInLeft 1s ease-out forwards;
   }
-  
+
+  /* Neon colors */
+.text-neon-purple {
+  color: #c084fc;
+}
+
+.neon-glow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #f7d02c, 0 0 30px #f7d02c;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px #f7d02c, 0 0 40px #f7d02c;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Background overlay for HUD effect */
+.bg-overlay-pattern {
+  background: url('/path/to/hud-overlay.png') repeat;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+/* Glow effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #f7d02c, 0 0 30px #f7d02c;
+}
+
+/* Neon glow animation */
+.neon-glow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #78c7ff, 0 0 30px #78c7ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px #78c7ff, 0 0 40px #78c7ff;
+}
+
+.hover-neon-pulse {
+  animation: pulse-neon 2s infinite;
+}
+
+@keyframes pulse-neon {
+  0% {
+      box-shadow: 0 0 20px #f7d02c;
+  }
+  50% {
+      box-shadow: 0 0 40px #f7d02c;
+  }
+  100% {
+      box-shadow: 0 0 20px #f7d02c;
+  }
+}
+
+/* Animated neon lines - game HUD effect */
+.neon-lines-top, .neon-lines-bottom {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(0, 255, 255, 1), rgba(0, 255, 255, 0));
+  animation: neon-line-animate 4s linear infinite;
+}
+
+.neon-lines-top {
+  top: 10px;
+}
+
+.neon-lines-bottom {
+  bottom: 10px;
+}
+
+@keyframes neon-line-animate {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+/* Glowing border for profile image */
+.neon-border {
+  box-shadow: 0 0 30px #78c7ff, 0 0 60px #78c7ff;
+}
+
+/* Spinning glow effect for the border ring */
+@keyframes glow-spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.animate-glow-spin {
+  animation: glow-spin 4s linear infinite;
+}
+
+/* Slow pulse animation */
+@keyframes pulse-slow {
+  0%, 100% {
+      transform: scale(1.05);
+  }
+  50% {
+      transform: scale(1.07);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+/* Parallax effect for depth */
+@keyframes parallax {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.animate-parallax {
+  animation: parallax 10s ease-in-out infinite;
+}
+
+/* Adjust the styles to ensure the background remains fixed and scales correctly */
+.min-h-screen {
+  background-image: url('../assets/background.jpg');
+  background-size: cover;  /* You can also use 'contain' depending on your needs */
+  background-attachment: fixed; /* Keeps the background fixed while the content scrolls */
+  background-position: center center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents repeating */
+}
 
   

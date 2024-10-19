@@ -14,7 +14,7 @@ const Navbar = () => {
             <NavLink
                 to="/home"
                 className={isActive('/home') 
-                    ? 'border-2 border-green-500 font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
+                    ? 'border-2 border-[#00ffff] font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
                     : 'text-white flex items-center gap-2'
                 }
             >
@@ -26,7 +26,7 @@ const Navbar = () => {
             <NavLink
                 to="/about"
                 className={isActive('/about') 
-                    ? 'border-2 border-green-500 font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
+                    ? 'border-2 border-[#00ffff] font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
                     : 'text-white flex items-center gap-2'
                 }
             >
@@ -38,7 +38,7 @@ const Navbar = () => {
             <NavLink
                 to="/projects"
                 className={isActive('/projects') 
-                    ? 'border-2 border-green-500 font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
+                    ? 'border-2 border-[#00ffff] font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
                     : 'text-white flex items-center gap-2'
                 }
             >
@@ -50,7 +50,7 @@ const Navbar = () => {
             <NavLink
                 to="/contact"
                 className={isActive('/contact') 
-                    ? 'border-2 border-green-500 font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
+                    ? 'border-2 border-[#00ffff] font-pixel text-white px-4 py-2 rounded-full flex items-center gap-2' // Adjust opacity
                     : 'text-white flex items-center gap-2'
                 }
             >

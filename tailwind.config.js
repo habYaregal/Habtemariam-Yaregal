@@ -20,9 +20,9 @@ export default {
         black:{
           500:'#000000'
         },
-        neonp:{500: '#9b5de5'},
-        neonb:{500: '#00bbf9'},
-        neong:{500:'#00f5d4'},
+        neonp:{500: '#00FFFF'},
+        neonb:{500: '#f7d02c'},
+        neong:{500:'#78c7ff'},
       },
       fontFamily: {
         crafty: ['"Crafty Girls"', 'cursive'],
@@ -31,13 +31,16 @@ export default {
         railway:['"Raleway"', 'sans-serif'],
         pirata:['"Pirata One"', 'system-ui'],
         pixel:['"Pixelify Sans"', 'serif'],
-        jacky:['"Jacquard 24"', 'system-ui']
+        jacky:['"Jacquard 24"', 'system-ui'],
+        lucky:['"Luckiest Guy"', 'cursive'],
+        orbit:['"Orbitron"', 'sans-serif'],
+        play:[' "Playfair"', 'serif']
       },
       fontSize: {
         '16px': '18px',
         'head': '64px',
         'par':'18px',
-        'qoute':'20px'
+        'qoute':'22px'
         },
       height:{
         'all' : '100hv'
